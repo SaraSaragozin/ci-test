@@ -106,5 +106,5 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: bervProject/railway-deploy@main
         with:
-          railway_token: ${{ secrets.RAILWAT_TOKEN }}
+          railway_token: ${{ secrets.RAILWAY_TOKEN }}
           service: "ci-test"
