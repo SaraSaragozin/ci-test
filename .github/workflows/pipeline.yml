@@ -104,8 +104,7 @@ jobs:
           fetch-depth: 0
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
-        uses: railwayapp/cli@0.7.2
+        uses: bervProject/railway-deploy@main
         with:
-          command: "railwaydeploy"
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAT_TOKEN }}
+          railway_token: ${{ secrets.RAILWAT_TOKEN }}
+          service: "ci-test"
